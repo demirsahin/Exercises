@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace odev_2
 {
@@ -10,22 +6,23 @@ namespace odev_2
     {
         static void Main(string[] args)
         {
-            baslangic:
-            int zar;
-            Console.Write("zar degerini girin: ");
-            zar = Convert.ToInt16(Console.ReadLine());
-            if (zar<=3)
+            while (true)
             {
-                Console.Write("Siz kazandınız");
-            }
-            else if (zar >= 3&& zar <= 6)
-            {
-                Console.Write("Bem kazandınım");
-            }
-            else
-            {
-                Console.Write(zar + " yanlıs bir deger tekrar deneyin" );
-                goto baslangic;
+                int zar = 1;
+                Console.Write("Zar degerini girin: ");
+                zar = Convert.ToInt16(Console.ReadLine());
+                if (zar > 0 && zar <= 3)
+                {
+                    Console.Write("Siz kazandiniz :) ");
+                }
+                else if (zar > 3 && zar <= 6)
+                {
+                    Console.Write("Ben kazandim :) ");
+                }
+                else
+                {
+                    Console.Write(zar + " Yanlis bir deger tekrar deneyin");
+                }
             }
             Console.ReadKey();
         }

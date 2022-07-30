@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            baslangic:
+            int ayse, baris;
+            Console.Write("ayse 1-10 aralıgında sayi gir: ");
+            ayse = Convert.ToInt16(Console.ReadLine());
+            if (1 <= ayse && ayse <=10 )
+            {
+                tahmin:
+                Console.Write("baris 1-10 aralıgında sayi girip aysenin sayisini tahmin etsin: ");
+                baris = Convert.ToInt16(Console.ReadLine());
+                if (baris == ayse)
+                { Console.Write("Baris aysenin sayisini bildi oyun bitti");}
+                else
+                {
+                    Console.Write("baris yanlis sayi tahmin etti ");
+                    goto tahmin;
+                }
+            }
+            else
+            {
+                Console.Write("ayse yanlıs deger girdi ");
+                goto baslangic;
+            }
+            Console.ReadKey();
+
+        }
+    }
+}

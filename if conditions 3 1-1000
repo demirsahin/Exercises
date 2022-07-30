@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace odev_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            baslangic:
+            int sayi;
+            Console.Write("0-1000 arası bir sayi giriniz: ");
+            sayi = Convert.ToInt32(Console.ReadLine());
+            if (0<= sayi && sayi<=500)
+            {
+                Console.Write("Siz kazandınız");
+            }
+            else if (501<= sayi && sayi <= 1000)
+            {
+                Console.Write("Ben kazandım");
+            }
+            else
+            {
+                Console.Write("yanlıs bir deger girdiniz tekrar deneyin ");
+                goto baslangic;
+            }
+            Console.ReadKey();
+        }
+}
+
+    }

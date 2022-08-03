@@ -1,30 +1,45 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace odev_2
+namespace ConsoleApp31
 {
     class Program
     {
         static void Main(string[] args)
         {
-            while (true)
+            int sayi1, sayi2, top, cık, carp, bol;
+            char islem;
+            Console.Write("sayi 1 giriniz: ");
+            sayi1 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("sayi 2 giriniz: ");
+            sayi2 = Convert.ToInt16(Console.ReadLine());
+            top = sayi1 + sayi2;
+            cık = sayi1 - sayi2;
+            carp = sayi1 * sayi2;
+            bol = sayi1 / sayi2;
+            Console.Write("yapmak istediginiz islemi sayilar ile secin 1-toplama 2-cıkarma 3-carpma 4-bolme: ");
+            islem = Convert.ToChar(Console.ReadLine());
+            if (islem == '1')
             {
-                int zar = 1;
-                Console.Write("Zar degerini girin: ");
-                zar = Convert.ToInt16(Console.ReadLine());
-                if (zar > 0 && zar <= 3)
-                {
-                    Console.Write("Siz kazandiniz :) ");
-                }
-                else if (zar > 3 && zar <= 6)
-                {
-                    Console.Write("Ben kazandim :) ");
-                }
-                else
-                {
-                    Console.Write(zar + " Yanlis bir deger tekrar deneyin");
-                }
+                Console.Write("islem sonucu= " + top);
+            }
+            else if (islem == '2')
+            {
+                Console.Write("islem sonucu= " + cık);
+            }
+            else if (islem == '3')
+            {
+                Console.Write("islem sonucu= " + carp);
+            }
+            else if (islem == '4')
+            {
+                Console.Write("islem sonucu= " + bol);
+            }
+            else
+            {
+                Console.Write("yanlis bir islem yaptınız tekrar deneyiniz");
             }
             Console.ReadKey();
-        }
-    }
-}

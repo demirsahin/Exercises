@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sayi1, sayi2, sonuc, mod;
+            Console.WriteLine("ilk sayiyi giriniz: ");
+            sayi1 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("ikinci sayiyi giriniz: ");
+            sayi2 = Convert.ToInt16(Console.ReadLine());
+            mod = sayi1 % sayi2;
+            sonuc = sayi1 / sayi2;
+            if (mod!= 0)
+            {    
+                Console.WriteLine("sonucunuz:" + sayi1 + " = " + sonuc + " * " + sayi2 + " + " + mod);
+            }
+            else
+            {
+                Console.WriteLine("sonucunuz:" + sayi1 + " = " + sonuc + " * " + sayi2 );
+            }
+            
+            Console.ReadKey();
+        }
+    }
+}

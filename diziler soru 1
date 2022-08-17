@@ -1,0 +1,31 @@
+using System;
+namespace ConsoleApp37
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.Write("dizideki eleman sayısını giriniz: ");
+            a = Convert.ToInt16(Console.ReadLine());
+            double[] dizi = new double[a];
+            for (int i = 0;i == a; i++)
+            {
+                int x, y, z;
+                x = -1;
+                y = 0;
+                Console.Write(y + ". sayiyi girin");
+                z = Convert.ToInt16(Console.ReadLine());
+                dizi[x] = z;
+                x++;
+                y++;
+            }
+            Array.Sort(dizi);
+            Console.Write(dizi);
+            Array.Reverse(dizi);
+            Console.Write(dizi);
+            Console.ReadKey();
+
+        }
+    }
+}

@@ -6,7 +6,7 @@ namespace ConsoleApp37
         static void Main(string[] args)
         {
             int a;
-            Console.Write("dizideki eleman sayısını giriniz: ");
+            Console.WriteLine("dizideki eleman sayısını giriniz: ");
             a = Convert.ToInt16(Console.ReadLine());
             double[] dizi = new double[a];
             for (int i = 0;i == a; i++)
@@ -14,16 +14,16 @@ namespace ConsoleApp37
                 int x, y, z;
                 x = -1;
                 y = 0;
-                Console.Write(y + ". sayiyi girin");
+                Console.WriteLine(y + ". sayiyi girin");
                 z = Convert.ToInt16(Console.ReadLine());
                 dizi[x] = z;
                 x++;
                 y++;
             }
             Array.Sort(dizi);
-            Console.Write(dizi);
+            Console.WriteLine("kucukten buyuge: " +dizi);
             Array.Reverse(dizi);
-            Console.Write(dizi);
+            Console.WriteLine("buyukten kucuge" +dizi);
             Console.ReadKey();
 
         }

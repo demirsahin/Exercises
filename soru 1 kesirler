@@ -1,0 +1,28 @@
+using System;
+
+
+namespace ConsoleApp34
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double sonuc = 0;
+            int sayac = 1;
+            while (sayac <= 1000)
+            {
+                sonuc += 000.1;
+                ++sayac;
+            }
+            if (sonuc == 1)
+            {
+                Console.Write("beklenildigi gibi");
+            }
+            else
+            {
+                Console.Write("farklı= " + sonuc);
+            }
+            Console.ReadKey();
+        }
+    }
+}

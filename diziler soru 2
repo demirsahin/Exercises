@@ -1,0 +1,50 @@
+using System;
+
+
+namespace ConsoleApp40
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sayi,sayac,a;
+            sayac = 0;
+            Console.WriteLine("bir dizide kac deger olucagını giriniz: ");
+            a = Convert.ToInt16(Console.ReadLine());
+            int[] dizi = new int[a];
+            int[] dizi2 = new int[a];
+            for (; ; )
+            {              
+                Console.WriteLine("sayıları giriniz; ");
+                sayi = Convert.ToInt16(Console.ReadLine());                
+                if (sayi % 2 == 1)
+                {
+                    dizi[sayac] = sayi;
+                }
+                else if (sayi % 2 == 0)
+                {
+                    dizi2[sayac] = sayi;
+                }
+                else if (sayi ==-1)
+                {
+                    Array.Sort(dizi);
+                    for (int i = 0; i < dizi.Length; i++)
+                    {
+                        Console.Write(dizi[i]);
+                    }
+                    Console.Write("/");
+
+                    Array.Sort(dizi2);
+                    for (int i = 0; i < dizi2.Length; i++)
+                    {
+                        Console.Write(dizi2[i]);
+                    }
+                    break;
+                }
+                sayac++;
+                
+            }
+                 Console.ReadKey();
+        }
+    }
+}
